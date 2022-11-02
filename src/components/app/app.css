@@ -1,0 +1,10 @@
+body {
+  background-color: #F7F7F7;
+}
+
+.app {
+  margin: 0 auto;
+  width: 1010px;
+  padding: 13px 36px;
+  background-color: #fff;
+}

@@ -1,0 +1,23 @@
+.card {
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+}
+
+.card-image {
+  width: 183px;
+  height: 281px;
+}
+
+.card-content {
+  padding: 12px 20px 0;
+  overflow-y: hidden;
+}
+
+.card-title {
+  font-size: 20px;
+  margin-bottom: 7px;
+}
+
+.genre {
+  color: rgba(0, 0, 0, 0.65);
+}
