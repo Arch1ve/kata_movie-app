@@ -16,14 +16,4 @@ export default class MovieApi {
     console.log(`query=${query}&page=${page}`)
     return this.getResource('/search/movie', `query=${query}&page=${page}`)
   }
-
-  async getPoster(path) {
-    const res = await fetch(`http://image.tmdb.org/t/p/w500/${path}`)
-
-    if (!res.ok) {
-      throw new Error(`Could not fetch http://image.tmdb.org/t/p/w500/${path}, received ${res.status}`)
-    }
-
-    return await res.blob()
-  }
 }

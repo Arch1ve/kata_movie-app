@@ -3,8 +3,21 @@ body {
 }
 
 .app {
+  display: flex;
+}
+
+.page-wrapper {
   margin: 0 auto;
   width: 1010px;
   padding: 13px 36px;
   background-color: #fff;
+  min-height: 100vh;
+}
+
+.main {
+  display: flex;
+}
+
+.offline-error {
+  margin: 100px auto;
 }
