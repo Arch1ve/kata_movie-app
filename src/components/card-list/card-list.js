@@ -11,10 +11,7 @@ export default class CardList extends Component {
   }
 
   render() {
-    console.log(this.state)
-
     const { movies, error, loading } = this.props
-    console.log(movies)
     const items = movies.map((el) => {
       return <Card key={el.id} data={el} />
     })
