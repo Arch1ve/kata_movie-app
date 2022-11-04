@@ -16,7 +16,7 @@ export default class CardList extends Component {
       return <Card key={el.id} data={el} />
     })
 
-    const list = loading || error ? null : <ul className="card-list">{items}</ul>
+    const list = loading || error || movies.length < 1 ? null : <ul className="card-list">{items}</ul>
     const errorAlert = error ? (
       <Alert
         className="offline-error"
@@ -27,12 +27,17 @@ export default class CardList extends Component {
       />
     ) : null
     const loader = loading ? <Spin className="loader" size="large" /> : null
+    const notFound =
+      !loading && !error && movies.length == 0 ? (
+        <Alert message="По вашему запросу ничего не найдено" type="info" className="notfound-alert" />
+      ) : null
 
     return (
       <React.Fragment>
         {loader}
         {list}
         {errorAlert}
+        {notFound}
       </React.Fragment>
     )
   }

@@ -13,7 +13,6 @@ export default class MovieApi {
   }
 
   getMovies(query, page) {
-    console.log(`query=${query}&page=${page}`)
     return this.getResource('/search/movie', `query=${query}&page=${page}`)
   }
 }
