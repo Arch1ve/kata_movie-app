@@ -7,13 +7,13 @@ import './card-list.css'
 export default class CardList extends Component {
   componentDidMount() {
     const { getMovies } = this.props
-    getMovies('return')
+    getMovies()
   }
 
   render() {
-    const { movies, error, loading } = this.props
+    const { movies, error, loading, rateMovie, rated } = this.props
     const items = movies.map((el) => {
-      return <Card key={el.id} data={el} />
+      return <Card key={el.id} data={el} rateMovie={rateMovie} rated={rated} />
     })
 
     const list = loading || error || movies.length < 1 ? null : <ul className="card-list">{items}</ul>
